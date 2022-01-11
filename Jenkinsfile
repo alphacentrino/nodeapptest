@@ -9,7 +9,8 @@ stages{
 // SCM Checkout Stage
     stage('Git-Checkout:'){
       steps{
-          git 'https://github.com/alphacentrino/nodeapp_test.git'
+          // git 'https://github.com/alphacentrino/nodeapp_test.git'
+          checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [[$class: 'CleanBeforeCheckout']], userRemoteConfigs: [[url: 'https://github.com/alphacentrino/nodeapp_test.git']]])
       }
     }
 // Build Image
