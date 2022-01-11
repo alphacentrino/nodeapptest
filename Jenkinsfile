@@ -7,6 +7,22 @@ environment{
 agent any
 
 stages{
+   // Workspce Clean Up 
+    stage('workspace Cleanup:'){
+        steps{
+            
+            cleanWs()
+        }
+    }
+    
+    // Checkout stage
+    stage('Checkout:'){
+        steps{
+        
+        git 'https://github.com/alphacentrino/nodeapp_test.git'
+        
+        }
+    }
  
 // Build Image
     stage('Build Image:'){
