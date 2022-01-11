@@ -19,7 +19,7 @@ stages{
     stage('Checkout:'){
         steps{
         
-        git 'https://github.com/alphacentrino/nodeapp_test.git'
+        git 'https://github.com/alphacentrino/nodeapptest.git'
         
         }
     }
