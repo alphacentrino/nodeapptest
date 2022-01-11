@@ -7,15 +7,9 @@ environment{
 agent any
 
 stages{
-   // Workspce Clean Up 
-    stage('workspace Cleanup:'){
-        steps{
-            
-            cleanWs()
-        }
-    }
     
     // Checkout stage
+    
     
  
 // Build Image
@@ -42,6 +36,15 @@ stages{
           
       }
     }
+
+    // Workspce Clean Up 
+    stage('workspace Cleanup:'){
+        steps{
+            
+            cleanWs()
+        }
+    }
+   
 
 
 
