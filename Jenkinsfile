@@ -16,13 +16,7 @@ stages{
     }
     
     // Checkout stage
-    stage('Checkout:'){
-        steps{
-        
-        git 'https://github.com/alphacentrino/nodeapptest.git'
-        
-        }
-    }
+    
  
 // Build Image
     stage('Build Image:'){
